@@ -6,10 +6,10 @@ export default function TaskModal({ isOpen, onClose, editingTask, taskForm, setT
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       <div 
-        className="absolute inset-0 bg-on-surface/40 backdrop-blur-sm" 
+        className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-0" 
         onClick={onClose}
       />
-      <div className="relative bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+      <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
         <div className="p-6 border-b border-outline-variant flex justify-between items-center">
           <h3 className="font-headline-md text-headline-md text-on-surface">
             {editingTask ? 'Edit Task / Event' : 'New Task / Event'}
