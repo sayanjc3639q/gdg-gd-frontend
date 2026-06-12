@@ -12,7 +12,7 @@ export default function TaskModal({ isOpen, onClose, editingTask, taskForm, setT
       />
 
       {/* Centering Container */}
-      <div className="flex min-h-full items-center justify-center p-4">
+      <div className="flex min-h-full w-full items-center justify-center p-4">
         {/* Modal Card */}
         <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl overflow-hidden transition-all">
           <div className="p-6 border-b border-outline-variant flex justify-between items-center">

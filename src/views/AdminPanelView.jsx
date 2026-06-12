@@ -241,7 +241,7 @@ export default function AdminPanelView({ members, setMembers }) {
             className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm transition-opacity" 
             onClick={() => setIsAddModalOpen(false)}
           />
-          <div className="flex min-h-full items-center justify-center p-4">
+          <div className="flex min-h-full w-full items-center justify-center p-4">
             <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-lg shadow-2xl overflow-hidden transition-all">
             <div className="p-6 border-b border-outline-variant flex justify-between items-center">
               <h3 className="font-headline-md text-headline-md text-on-surface">Add New Member</h3>
