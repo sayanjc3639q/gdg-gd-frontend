@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# GDG custom ignore rules
+design.md
+DESIGN.md
+stitch_gdg_design_task_manager/
