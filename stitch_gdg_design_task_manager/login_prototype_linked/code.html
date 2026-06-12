@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | GDG on Campus HIT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d7dae0",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed-variant": "#930004",
+                        "inverse-on-surface": "#eef1f7",
+                        "tertiary": "#b51b15",
+                        "on-secondary-fixed-variant": "#005320",
+                        "surface-container-highest": "#dfe3e8",
+                        "on-secondary-fixed": "#002108",
+                        "inverse-primary": "#adc6ff",
+                        "surface-bright": "#f7f9ff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#89fa9b",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "on-secondary-container": "#00722f",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary-container": "#fefcff",
+                        "on-primary-fixed": "#001a41",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2d3135",
+                        "background": "#f7f9ff",
+                        "primary": "#0058bd",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#2771df",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#dfe3e8",
+                        "surface-container-low": "#f1f4fa",
+                        "outline": "#727785",
+                        "on-primary-fixed-variant": "#004494",
+                        "surface-container-high": "#e5e8ee",
+                        "on-background": "#181c20",
+                        "on-surface-variant": "#424753",
+                        "on-tertiary-fixed": "#410001",
+                        "tertiary-container": "#d9372b",
+                        "on-surface": "#181c20",
+                        "surface-tint": "#005ac1",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#6ddd81",
+                        "surface-container": "#ebeef4",
+                        "outline-variant": "#c2c6d5",
+                        "surface": "#f7f9ff",
+                        "secondary": "#006e2c",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#86f898",
+                        "on-tertiary-container": "#fffbff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px",
+                        "lg": "24px",
+                        "xl": "32px",
+                        "sm": "8px",
+                        "xxl": "48px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "margin-desktop": "32px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "label-lg": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "title-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1px", "fontWeight": "500"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.5px", "fontWeight": "500"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f7f9ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .elevation-1 {
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.12);
+        }
+        .glass-background {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-md overflow-hidden bg-surface">
+<!-- Decorative Atmosphere -->
+<div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute -bottom-[10%] -right-[10%] w-[40%] h-[40%] rounded-full bg-secondary/5 blur-[120px]"></div>
+</div>
+<!-- Login Container -->
+<main class="w-full max-w-[448px] animate-in fade-in slide-in-from-bottom-4 duration-700">
+<!-- Login Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-[28px] p-xl elevation-1">
+<!-- Logo Section -->
+<div class="flex flex-col items-center mb-xl">
+<div class="w-16 h-16 mb-md flex items-center justify-center">
+<img alt="Google Logo" class="w-12 h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOoPnor6BxYu4wwGpuiEtOOZpfTeZFmfpbFf5lwGbBhBg_RH8pTrxrh2IB8ncLOltOqYFwJIF4MmwZcAtC0UTtsoHkwgl8McX7FluyQvmTdpWAeAqgGrcLLjAXoe8jBZ_P-m8XnrT1TVkCbV9m5iWsLmCp6t2wB021fjhwZfdefzHIrnHZeciIBVWlg9RJapH58CyYNsdYxfS3sjB2ZFGrWQ62U_h2EqVdODVkMP47_tgTsY2-o-ZyWP-Rdh_HBhy0G6m0Jchy9wGi"/>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface text-center">GDG on Campus HIT</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs text-center">Sign in to continue to Admin Console</p>
+</div>
+<!-- Primary Action: Sign in with Google -->
+<button class="w-full h-12 flex items-center justify-center gap-md bg-surface-container-lowest border border-outline-variant rounded-full font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 active:scale-[0.98]" onclick="window.location.href='{{DATA:SCREEN:SCREEN_8}}'">
+<img alt="G" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8lf9pZxyH2FFKdECl4qxwQ5DsgxtBh8DPaGXcVC56tbq00E6x_u7eVVjVVip5O9RXgUFlN6Rb8qoT9oUQl7P0YLe1S7igQc_pkJEVlv4hBUETc_PDSYmSe0-kzCwkrUtSqFoIK4u39M8YXqmjPHAhGqDQ0v6yfi9CcvzAAtRTUyTm2iOdvkPwxzoZ8Y9Il7QXLG6Z2CXe15YoMtWxHbYH8dQPd5-gel7kbBVLvr3Gv-_9HPzTg01netVNUvttj4swY8q6P90Zteoq"/>
+                Sign in with Google
+            </button>
+<!-- Divider -->
+<div class="flex items-center my-xl">
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+<span class="px-md font-label-sm text-label-sm text-outline uppercase tracking-widest">or</span>
+<div class="flex-grow h-[1px] bg-outline-variant"></div>
+</div>
+<!-- Form Fields -->
+<form class="space-y-md" onsubmit="window.location.href='{{DATA:SCREEN:SCREEN_8}}'; return false;">
+<div class="group">
+<label class="block font-label-lg text-label-lg text-on-surface-variant mb-xs ml-xs" for="email">Email address</label>
+<div class="relative">
+<input class="w-full h-14 px-md rounded-xl border border-outline-variant bg-transparent font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" id="email" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+<div class="group">
+<label class="block font-label-lg text-label-lg text-on-surface-variant mb-xs ml-xs" for="password">Password</label>
+<div class="relative">
+<input class="w-full h-14 px-md rounded-xl border border-outline-variant bg-transparent font-body-lg text-body-lg text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between py-xs">
+<label class="flex items-center gap-sm cursor-pointer group">
+<div class="relative flex items-center">
+<input class="peer h-5 w-5 rounded border-outline-variant text-primary focus:ring-primary cursor-pointer transition-all" type="checkbox"/>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant group-hover:text-on-surface transition-colors">Remember me</span>
+</label>
+<a class="font-label-lg text-label-lg text-primary hover:underline transition-all" href="#">Forgot password?</a>
+</div>
+<button class="w-full h-14 bg-primary text-on-primary rounded-full font-label-lg text-label-lg hover:shadow-lg hover:opacity-90 transition-all duration-300 active:scale-[0.98] mt-md" type="submit">
+                    Sign In
+                </button>
+</form>
+<!-- Secondary Actions -->
+<div class="mt-xl pt-lg border-t border-outline-variant text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Don't have access? 
+                    <a class="text-primary font-label-lg text-label-lg ml-xs hover:underline transition-all" href="#">Request access</a>
+</p>
+</div>
+</div>
+<!-- Footer Links -->
+<footer class="mt-xl flex flex-wrap justify-center gap-lg px-md">
+<a class="font-label-sm text-label-sm text-outline hover:text-on-surface-variant transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-on-surface-variant transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-outline hover:text-on-surface-variant transition-colors" href="#">Help Center</a>
+</footer>
+</main>
+<!-- Subtle Micro-interactions -->
+<script>
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.parentElement.querySelector('label').style.color = 'var(--primary)';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.parentElement.querySelector('label').style.color = '';
+            });
+        });
+
+        // Basic password visibility toggle
+        const toggleBtn = document.querySelector('button[type="button"]');
+        const passwordInput = document.getElementById('password');
+        
+        if(toggleBtn && passwordInput) {
+            toggleBtn.addEventListener('click', () => {
+                const isPassword = passwordInput.type === 'password';
+                passwordInput.type = isPassword ? 'text' : 'password';
+                toggleBtn.querySelector('.material-symbols-outlined').textContent = isPassword ? 'visibility_off' : 'visibility';
+            });
+        }
+    </script>
+</body></html>
