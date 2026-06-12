@@ -7,12 +7,12 @@ export default function TaskModal({ isOpen, onClose, editingTask, taskForm, setT
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm cursor-pointer" 
+        className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm z-40 cursor-pointer" 
         onClick={onClose}
       />
 
       {/* Modal Card */}
-      <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-xl shadow-2xl overflow-hidden">
+      <div className="relative z-50 bg-white w-full max-w-lg rounded-xl shadow-2xl overflow-hidden">
         <div className="p-6 border-b border-outline-variant flex justify-between items-center">
           <h3 className="font-headline-md text-headline-md text-on-surface">
             {editingTask ? 'Edit Task / Event' : 'New Task / Event'}
