@@ -234,15 +234,13 @@ export default function AdminPanelView({ members, setMembers }) {
         </div>
       </main>
 
-      {/* Add New Member Modal */}
       {isAddModalOpen && (
-        <div className="fixed inset-0 z-[100] overflow-y-auto">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div 
-            className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm transition-opacity" 
+            className="fixed inset-0 bg-on-surface/40 backdrop-blur-sm cursor-pointer" 
             onClick={() => setIsAddModalOpen(false)}
           />
-          <div className="flex min-h-full w-full items-center justify-center p-4">
-            <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-lg shadow-2xl overflow-hidden transition-all">
+          <div className="relative z-50 bg-surface-container-lowest w-full max-w-lg rounded-lg shadow-2xl overflow-hidden">
             <div className="p-6 border-b border-outline-variant flex justify-between items-center">
               <h3 className="font-headline-md text-headline-md text-on-surface">Add New Member</h3>
               <button 
@@ -378,7 +376,6 @@ export default function AdminPanelView({ members, setMembers }) {
             </form>
           </div>
         </div>
-      </div>
       )}
     </div>
   );
